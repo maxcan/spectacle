@@ -16,6 +16,7 @@
     "url": "https://github.com/FormidableLabs/spectacle.git"
   },
   "dependencies": {
+    "react-live": "^2.1.2",
     "react-spring": "^8.0.25"
   },
   "prettier": {

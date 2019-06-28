@@ -1,7 +1,15 @@
 <!-- This is an MDX file that is imported in index.js and transpiled to
 JSX and then rendered, feel free to change this! -->
 
-import { Deck, Slide, SlideElementWrapper, DeckContext } from 'spectacle';
+import {
+  Deck,
+  Slide,
+  SlideElementWrapper,
+  DeckContext,
+  CodePane
+} from 'spectacle';
+
+import {code} from './code.js'
 
 <Deck loop={true}>
   <Slide
@@ -29,6 +37,8 @@ import { Deck, Slide, SlideElementWrapper, DeckContext } from 'spectacle';
       Hey, just one "animated" slide element here
     </SlideElementWrapper>
   </Slide>
+  <Slide><CodePane code={code}/></Slide>
+
   <Slide>
     <p>I'm a static slide element that should always show</p>
     <p>This means that we don't need a SlideElementWrapper</p>
