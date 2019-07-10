@@ -168,8 +168,8 @@ Slide.propTypes = {
 };
 
 Slide.contextTypes = {
-  contentHeight: PropTypes.number,
-  contentWidth: PropTypes.number,
+  contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   export: PropTypes.bool,
   onStateChange: PropTypes.func.isRequired,
   overview: PropTypes.bool,

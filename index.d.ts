@@ -167,6 +167,8 @@ declare module 'spectacle' {
     theme?: Theme;
     transition?: transitionType[];
     transitionDuration?: number;
+    contentWidth: number | string;
+    contentHeight: number | string;
   }
 
   interface FillProps {

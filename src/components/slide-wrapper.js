@@ -188,8 +188,8 @@ SlideWrapper.propTypes = {
 
 SlideWrapper.contextTypes = {
   styles: PropTypes.object,
-  contentWidth: PropTypes.number,
-  contentHeight: PropTypes.number,
+  contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   export: PropTypes.bool,
   print: PropTypes.object,
   overview: PropTypes.bool,

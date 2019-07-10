@@ -105,8 +105,8 @@ export class Manager extends Component {
     autoplayLoop: PropTypes.bool,
     autoplayOnStart: PropTypes.bool,
     children: PropTypes.node,
-    contentHeight: PropTypes.number,
-    contentWidth: PropTypes.number,
+    contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     controls: PropTypes.bool,
     disableKeyboardControls: PropTypes.bool,
     dispatch: PropTypes.func,
@@ -131,8 +131,8 @@ export class Manager extends Component {
   };
 
   static childContextTypes = {
-    contentWidth: PropTypes.number,
-    contentHeight: PropTypes.number,
+    contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     goToSlide: PropTypes.func
   };
 
@@ -799,8 +799,8 @@ export class Manager extends Component {
             body: Object.assign(this.context.styles.global.body, {
               minWidth: this.state.mobile
                 ? '100vw'
-                : this.props.contentWidth + 150,
-              minHeight: this.props.contentHeight + 150,
+                : `calc(${this.props.contentWidth} + 150px)`,
+              minHeight: `calc(${this.props.contentHeight} + 150px)`,
               overflow: 'auto'
             }),
             '.spectacle-presenter-next .fragment': {

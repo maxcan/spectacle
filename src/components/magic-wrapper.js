@@ -20,8 +20,8 @@ class Context extends Component {
     context: PropTypes.object
   };
   static contextTypes = {
-    contentHeight: PropTypes.number,
-    contentWidth: PropTypes.number,
+    contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     export: PropTypes.bool,
     overview: PropTypes.bool,
     print: PropTypes.bool,
@@ -29,8 +29,8 @@ class Context extends Component {
     styles: PropTypes.object
   };
   static childContextTypes = {
-    contentHeight: PropTypes.number,
-    contentWidth: PropTypes.number,
+    contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     export: PropTypes.bool,
     overview: PropTypes.bool,
     print: PropTypes.bool,
@@ -61,8 +61,8 @@ export default class MagicText extends Component {
     presenter: PropTypes.bool
   };
   static contextTypes = {
-    contentHeight: PropTypes.number,
-    contentWidth: PropTypes.number,
+    contentHeigh: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    contentWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     export: PropTypes.bool,
     overview: PropTypes.bool,
     print: PropTypes.bool,
